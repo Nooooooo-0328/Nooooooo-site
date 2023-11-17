@@ -3,8 +3,9 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hdden;
+  overflow: auto;
 }
+
 .loader-wrapper {
   display: flex;
   justify-content: center;
@@ -29,8 +30,8 @@ body {
   opacity: 0;
   animation: fadeIn 2s ease 5s forwards;
   white-space: nowrap;
-  font-weight: bold; 
-  background-color: rgba(0, 0, 0, 0.8); 
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 10px;
 }
 

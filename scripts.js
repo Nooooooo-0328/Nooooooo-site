@@ -15,19 +15,19 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 500);
     }
 
-  function showWelcomeMessage() {
-      var welcomeMessage = document.createElement("div");
-      welcomeMessage.className = "welcome-message";
-      welcomeMessage.innerHTML = "Noooooooのホームページへようこそ!<br>Welcome to Noooooo homepage!";
-      document.body.appendChild(welcomeMessage);
-      setTimeout(function () {
-          welcomeMessage.style.opacity = 1;
-          setTimeout(function () {
-              welcomeMessage.style.opacity = 0;
-              setTimeout(function () {
-                  welcomeMessage.parentNode.removeChild(welcomeMessage);
-              }, 500);
-          }, 2000);
-      }, 100);
-  }
+    function showWelcomeMessage() {
+        var welcomeMessage = document.createElement("div");
+        welcomeMessage.className = "welcome-message";
+        welcomeMessage.innerHTML = "Noooooooのホームページへようこそ!<br>Welcome to Noooooo homepage!";
+        document.body.appendChild(welcomeMessage);
+        setTimeout(function () {
+            welcomeMessage.style.opacity = 1;
+            setTimeout(function () {
+                welcomeMessage.style.opacity = 0;
+                setTimeout(function () {
+                    welcomeMessage.parentNode.removeChild(welcomeMessage);
+                }, 500);
+            }, 2000);
+        }, 100);
+    }
 });
