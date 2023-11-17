@@ -1,0 +1,162 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.loader-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #1a1a1a;
+  z-index: 1000;
+  animation: fadeOut 2s ease 5s forwards;
+}
+
+.welcome-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5em;
+  color: #dd9a09;
+  opacity: 0;
+  animation: fadeIn 2s ease 5s forwards;
+  white-space: nowrap;
+  font-weight: bold; 
+  background-color: rgba(0, 0, 0, 0.8); 
+  padding: 10px;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.loader-container {
+  position: relative;
+}
+
+.loader {
+  border: 8px solid #3498db;
+  border-top: 8px solid #f3f3f3;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite, color-change 5s infinite alternate;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.percentage {
+  font-size: 1.5em;
+  color: #333;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes color-change {
+  0% { background: #3498db; }
+  50% { background: #2ecc71; }
+  100% { background: #3498db; }
+}
+
+header {
+  background-color: #ff7300;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+footer {
+  background-color: #414141;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.profile-section {
+  border: 2px solid #333;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+.profile-box {
+  border: 1px solid #ccc;
+  padding: 15px;
+}
+
+.profile-item {
+  margin-bottom: 10px;
+}
+
+details {
+  border: 1px solid #000;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: height 0.5s ease;
+  position: relative;
+  margin-bottom: 10px; 
+}
+
+details[open] {
+  border-radius: 5px 5px 0 0;
+  height: auto; 
+  background: #aaa;
+  margin-bottom: 32px;
+}
+
+details[open]:nth-of-type(3) {
+  min-height: 80px;
+}
+
+details summary {
+  cursor: pointer;
+}
