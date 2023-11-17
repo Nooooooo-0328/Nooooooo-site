@@ -1,18 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var loader = document.querySelector(".loader");
-  var percentageElement = document.querySelector(".percentage");
-  setTimeout(function () {
-      fadeOutLoader();
-      showWelcomeMessage();
-  }, 5000);
+    var body = document.body;
+    var loaderWrapper = document.querySelector(".loader-wrapper");
 
-  function fadeOutLoader() {
-      var loaderWrapper = document.querySelector(".loader-wrapper");
-      loaderWrapper.style.opacity = 0;
-      setTimeout(function () {
-          loaderWrapper.style.display = "none";
-      }, 500);
-  }
+    setTimeout(function () {
+        fadeOutLoader();
+        showWelcomeMessage();
+    }, 5000);
+
+    function fadeOutLoader() {
+        loaderWrapper.style.opacity = 0;
+        setTimeout(function () {
+            loaderWrapper.style.display = "none";
+            body.classList.remove("loading");
+        }, 500);
+    }
 
   function showWelcomeMessage() {
       var welcomeMessage = document.createElement("div");
